@@ -9,7 +9,7 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 Route::view('admin/dashboard', 'admin.dashboard')
-    ->middleware(['auth', 'verified'])
+    ->middleware(['auth', 'verified','admin'])
     ->name('admin.dashboard');
 // Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
